@@ -6,9 +6,11 @@
 
 **Meet friends inside a colorful 3D village.** Walk with WASD, visit cafés and parks, ride a taxi, chat in private rooms, talk over live voice, listen to shared music, or watch permitted videos together in the cinema.
 
+**Created and owned by [Priyanshu Ranjan](https://github.com/Priyanshu61).**
+
 ### [Launch Somewhere →](https://somewhere-guest-world.somewhere-free.workers.dev/)
 
-No ChatGPT account or installation is required. Choose a nickname, create a room, send its private invitation to friends, approve them, and lock the room when everyone arrives.
+No account or installation is required. Choose a nickname, create a room, send its private invitation to friends, approve them, and lock the room when everyone arrives.
 
 ## What you can do
 
@@ -25,7 +27,7 @@ If you enjoy the project, star the repository and share the [live app](https://s
 
 In Activities, the host can choose an audio/video file up to 50 MB. Guests click **Receive shared file** to receive encrypted chunks, verify the file hash, and join playback. Transfers require the host to remain connected; files are held temporarily in browser memory and are not saved on the server. For larger files, use the existing direct HTTPS link option. Personal audio mute stays independent of host play/pause, and playback speed is fixed at 1×.
 
-This edition replaces the Railway account-server setup. Guests choose a nickname and enter: no password, email, Google, Facebook, or ChatGPT account. Social sign-in is deferred.
+Guests choose a nickname and enter without a password or email. Social sign-in is deferred.
 
 The 3D world, animation, camera, media decoding, and encryption run in each person's browser. A small **Cloudflare Worker + SQLite Durable Object** handles invitations, guest sessions, host approval, and encrypted message delivery. Your laptop does not need to stay on after deployment. This is not a fully serverless peer-to-peer messenger: internet rooms still need shared infrastructure.
 
