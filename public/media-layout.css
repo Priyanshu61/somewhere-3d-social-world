@@ -1,0 +1,19 @@
+#filePanel{padding:16px;margin:16px 0;border:1px solid #b7ceb8;background:#eef5e7;border-radius:12px}
+#filePanel h3{margin:0 0 8px}#filePanel label{display:block;font-size:12px;margin:12px 0 8px}
+#localMedia{display:block;box-sizing:border-box;max-width:100%;width:100%;font-size:12px;padding:8px;background:white;color:#254c3e;border:1px solid #b7ceb8;border-radius:8px}
+#localMedia::file-selector-button{padding:10px;border:0;border-radius:6px;background:#356f57;color:white;cursor:pointer;margin-right:8px}
+#fileProgress{overflow-wrap:anywhere}
+/* Reserve a separate chat area; ResizeObserver refits the 3D screen to the remaining space. */
+.cinema-expanded.cinema-chat-visible #world{width:calc(100% - 340px)!important;height:100dvh!important;right:340px!important}
+.cinema-expanded.cinema-chat-visible #chatPanel{left:auto!important;right:0!important;top:0!important;bottom:70px!important;width:340px!important;height:calc(100dvh - 70px)!important;max-height:none!important;max-width:none!important;min-height:0!important;border-radius:0;opacity:1;resize:none}
+.cinema-expanded #chatPanel .draglabel{display:none}.cinema-expanded #chatPanel .chathead{cursor:default}
+.cinema-expanded .speech{display:none!important}
+@media(max-width:700px){
+ .cinema-expanded.cinema-chat-visible #world{width:100%!important;height:54dvh!important;right:0!important}
+ .cinema-expanded.cinema-chat-visible #chatPanel{left:0!important;right:0!important;top:54dvh!important;bottom:64px!important;width:100%!important;height:calc(46dvh - 64px)!important;min-width:0!important}
+ .cinema-expanded #chatPanel .chathead{padding:8px 35px 8px 12px}.cinema-expanded #chatPanel .privacy,.cinema-expanded #chatPanel .welcome{display:none}
+ .cinema-expanded #chatPanel #voiceControls{padding:5px 10px}.cinema-expanded #chatPanel #voiceStatus{flex-basis:auto}
+ .cinema-expanded #chatPanel #messages{padding:8px}.cinema-expanded #chatPanel #chat{margin:4px 8px 8px}
+}
+
+#browseMedia{display:block;width:100%;margin:8px 0}#pickerHelp{font-size:11px}#filePanel.file-dragging{outline:3px solid #356f57;background:#deefd5}
