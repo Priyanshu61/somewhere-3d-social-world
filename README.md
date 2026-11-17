@@ -1,6 +1,29 @@
-# Somewhere — free-hosting guest edition
+# Somewhere — a shared 3D world for friends
 
-Latest media update: in Activities, the host can choose an audio/video file up to 50 MB. Guests click **Receive shared file** to receive encrypted chunks, verify the file hash, and join playback. Transfers require the host to remain connected; files are held temporarily in browser memory and are not saved on the server. For larger files, use the existing direct HTTPS link option. Personal audio mute now stays independent of host play/pause, and small timing drift is corrected gradually instead of repeatedly seeking backward.
+[![Live app](https://img.shields.io/badge/Open_live_app-2f6f59?style=for-the-badge)](https://somewhere-guest-world.somewhere-free.workers.dev/)
+[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-f38020?style=flat-square&logo=cloudflare&logoColor=white)](https://workers.cloudflare.com/)
+[![License](https://img.shields.io/badge/license-source_available-blue?style=flat-square)](#license-and-assets)
+
+**Meet friends inside a colorful 3D village.** Walk with WASD, visit cafés and parks, ride a taxi, chat in private rooms, talk over live voice, listen to shared music, or watch permitted videos together in the cinema.
+
+### [Launch Somewhere →](https://somewhere-guest-world.somewhere-free.workers.dev/)
+
+No ChatGPT account or installation is required. Choose a nickname, create a room, send its private invitation to friends, approve them, and lock the room when everyone arrives.
+
+## What you can do
+
+- Explore a browser-based 3D village with keyboard and touch controls.
+- Create private rooms for up to ten people with expiring invitations and host approval.
+- Use encrypted room chat, animated avatars, live voice chat, shared seating, and taxi rides.
+- Share supported audio or video files up to 50 MB temporarily between room members.
+- Watch permitted videos on the in-world cinema screen with synchronized host controls.
+- Run the complete project on Cloudflare's free tier without keeping a personal computer online.
+
+If you enjoy the project, star the repository and share the [live app](https://somewhere-guest-world.somewhere-free.workers.dev/) with someone you want to meet there.
+
+## Media sharing
+
+In Activities, the host can choose an audio/video file up to 50 MB. Guests click **Receive shared file** to receive encrypted chunks, verify the file hash, and join playback. Transfers require the host to remain connected; files are held temporarily in browser memory and are not saved on the server. For larger files, use the existing direct HTTPS link option. Personal audio mute stays independent of host play/pause, and playback speed is fixed at 1×.
 
 This edition replaces the Railway account-server setup. Guests choose a nickname and enter: no password, email, Google, Facebook, or ChatGPT account. Social sign-in is deferred.
 
@@ -53,7 +76,11 @@ Keys and invitation copies live in `sessionStorage` for the current browser sess
 - **Not independently audited; no absolute-security promise.** There is no forward secrecy or key rotation, and web clients must trust the JavaScript served by the hosting account. Anyone given the room key could decrypt captured room packets; locking stops new server admissions but does not revoke a disclosed key. Close the room and create a new one if the invitation leaks. Approved participants can record or share content.
 - Guest approval protects admission, not real-world identity. There is no recovery service, MFA, moderation service, participant removal/rekey, or anti-cheat system in this release.
 
-Netflix, Disney+, and Spotify are not integrated. Permitted direct videos play on the 3D screen; the bundled film is a ten-second licensed preview. The original ambient soundtrack works in the app. See `public/CREDITS.md`.
+Permitted direct videos play on the 3D screen; the bundled film is a ten-second licensed preview. The original ambient soundtrack works in the app. See `public/CREDITS.md`.
+
+## License and assets
+
+The repository is currently published as source available with no general reuse license granted. Third-party and bundled asset credits are listed in `public/CREDITS.md`. Open an issue before redistributing the project or its assets.
 
 ## Validation and files
 
